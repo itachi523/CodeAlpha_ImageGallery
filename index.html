@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>BSKCAM</title>
+
+  <link rel="stylesheet"
+    href="style.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+
+      BSKCAM
+
+    </div>
+
+    <ul>
+
+      <li onclick="filterSelection('all')">
+        Explore
+      </li>
+
+      <li onclick="filterSelection('nature')">
+        Nature
+      </li>
+
+      <li onclick="filterSelection('city')">
+        City
+      </li>
+
+      <li onclick="filterSelection('animals')">
+        Wildlife
+      </li>
+
+      <li onclick="filterSelection('cars')">
+        Cars
+      </li>
+
+    </ul>
+
+  </nav>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-left">
+
+      <h1>
+
+        Capture Moments
+        That Last Forever
+
+      </h1>
+
+      <p>
+
+        Through the lens,
+        life becomes art.
+
+        Explore premium
+        photography only
+        on BSKCAM.
+
+      </p>
+
+      <!-- SEARCH -->
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search photography..."
+          onkeyup="searchImages()"
+        >
+
+      </div>
+
+    </div>
+
+    <!-- HERO IMAGES -->
+
+    <div class="hero-right">
+
+      <div class="hero-card big-card">
+
+        <img
+          src="images/city/city1.jpg"
+        >
+
+      </div>
+
+      <div class="hero-card small-card">
+
+        <img
+          src="images/nature/nature1.jpg"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+
+  <section class="stats">
+
+    <div class="stat-box">
+
+      <h2 id="imageCounter">
+
+        0
+
+      </h2>
+
+      <p>
+
+        Total Images
+
+      </p>
+
+    </div>
+
+    <div class="stat-box">
+
+      <h2>
+
+        4
+
+      </h2>
+
+      <p>
+
+        Categories
+
+      </p>
+
+    </div>
+
+    <div class="stat-box">
+
+      <h2>
+
+        56+
+
+      </h2>
+
+      <p>
+
+        Photos
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- UPLOAD -->
+
+  <div class="upload-section">
+
+    <input
+      type="file"
+      id="upload"
+      multiple
+      accept="image/*"
+    >
+
+  </div>
+
+  <!-- GALLERY TITLE -->
+
+  <div class="gallery-title">
+
+    <h2>
+
+      Trending Photography
+
+    </h2>
+
+    <p>
+
+      Explore high-quality
+      photography from BSKCAM.
+
+    </p>
+
+  </div>
+
+  <!-- GALLERY SECTION -->
+
+  <section id="gallerySection">
+
+    <div class="gallery"
+      id="gallery">
+
+    </div>
+
+  </section>
+
+  <!-- LIGHTBOX -->
+
+  <div id="lightbox">
+
+    <!-- CLOSE -->
+
+    <span
+      class="close"
+      onclick="closeLightbox()">
+
+      ×
+
+    </span>
+
+    <!-- PREV -->
+
+    <button
+      class="prev"
+      onclick="changeSlide(-1)">
+
+      ❮
+
+    </button>
+
+    <!-- IMAGE -->
+
+    <img id="lightbox-img">
+
+    <!-- NEXT -->
+
+    <button
+      class="next"
+      onclick="changeSlide(1)">
+
+      ❯
+
+    </button>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
